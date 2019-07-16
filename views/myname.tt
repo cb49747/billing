@@ -6,7 +6,7 @@
           <h2>Will be interactive soon</h2>
         </div>
 
-        <div id="about-content" style="display: none;">
+        <div>
           Your name is Chris Burger
         </div>
 </div>
