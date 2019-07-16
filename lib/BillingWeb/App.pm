@@ -8,7 +8,9 @@ get '/' => sub {
 };
 
 get '/myname' => sub {
-    template 'myname' => { 'title' => 'MyName' };
+    my $fname  = query_parameters->get('fname');
+    my $lname  = query_parameters->get('lname');
+    template 'myname' => { 'title' => 'MyName', 'fname' => $fname, 'lname' => $lname };
 };
 
 true;

@@ -7,6 +7,6 @@
         </div>
 
         <div>
-          Your name is Chris Burger
+          Your name is <% fname %> <% lname %>
         </div>
 </div>
