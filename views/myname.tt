@@ -1,0 +1,12 @@
+<div id="page">
+
+      <div id="content">
+        <div id="header">
+          <h1>My Name is:</h1>
+          <h2>Will be interactive soon</h2>
+        </div>
+
+        <div id="about-content" style="display: none;">
+          Your name is Chris Burger
+        </div>
+</div>
