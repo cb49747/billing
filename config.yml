@@ -18,14 +18,14 @@ charset: "UTF-8"
 # simple: default and very basic template engine
 # template_toolkit: TT
 
-template: "simple"
+#template: "simple"
 
-# template: "template_toolkit"
-# engines:
-#   template:
-#     template_toolkit:
-#       start_tag: '<%'
-#       end_tag:   '%>'
+ template: "template_toolkit"
+ engines:
+   template:
+     template_toolkit:
+       start_tag: '<%'
+       end_tag:   '%>'
 
 # session engine
 #
@@ -39,14 +39,37 @@ template: "simple"
 # Dancer apps on the same host then you will need to make sure 'cookie_name'
 # is different for each app.
 #
-#engines:
-#  session:
-#    Simple:
-#      cookie_name: testapp.session
-#
+engines:
+  session:
+    Simple:
+      cookie_name: testapp.session
+
 #engines:
 #  session:
 #    YAML:
 #      cookie_name: eshop.session
 #      is_secure: 1
 #      is_http_only: 1
+
+# mysql database
+#plugins:
+#  DBIC:
+#    bookstore:
+#      schema_class: My::Bookstore::Schema
+#      dsn: "dbi:SQLite:dbname=bookstore.db"
+plugins:
+    Database:
+        driver: 'mysql'
+        database: 'mckinleybilling_billing'
+        host: 'localhost'
+        port: 3306
+        username: 'mckinleybilling'
+        password: '!C#0159cb!'
+        connection_check_threshold: 10
+        dbi_params:
+            RaiseError: 1
+            AutoCommit: 1
+        on_connect_do: ["SET NAMES 'utf8'", "SET CHARACTER SET 'utf8'" ]
+        log_queries: 1
+#        handle_class: 'My::Super::Sexy::Database::Handle'
+
