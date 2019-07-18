@@ -21,11 +21,11 @@ charset: "UTF-8"
 #template: "simple"
 
 template: "template_toolkit"
-# engines:
-#   template:
-#     template_toolkit:
-#       start_tag: '<%'
-#       end_tag:   '%>'
+engines:
+   template:
+      template_toolkit:
+         start_tag: '<%'
+         end_tag:   '%>'
 
 # session engine
 #
@@ -39,10 +39,10 @@ template: "template_toolkit"
 # Dancer apps on the same host then you will need to make sure 'cookie_name'
 # is different for each app.
 #
-engines:
-  session:
-    Simple:
-      cookie_name: testapp.session
+#engines:
+   session:
+      Simple:
+         cookie_name: testapp.session
 
 #engines:
 #  session:

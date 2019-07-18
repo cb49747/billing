@@ -9,7 +9,7 @@ $eumm_version =~ s/_//;
 
 WriteMakefile(
     NAME                => 'BillingWeb::App',
-    AUTHOR              => q{YOUR NAME <youremail@example.com>},
+    AUTHOR              => q{Christopher Burger <burgerc@mckinleyproducts.com>},
     VERSION_FROM        => 'lib/BillingWeb/App.pm',
     ABSTRACT            => 'YOUR APPLICATION ABSTRACT',
     ($eumm_version >= 6.3001
